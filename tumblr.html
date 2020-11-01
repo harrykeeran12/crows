@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="font:mostthings" content="Arial" />
+    <meta name="color:Background" content="#efefef" />
+    <meta name="color:Headers" content="#ffffff" />
+    <meta name="color:Accent" content="#671d1d" />
+    <meta name="text:home" content="" />
+    <meta name="text:about" content="" />
+    <meta name="text:members" content="" />
+    <meta name="text:message" content="" />
+    <meta name="text:navigation" content="" />
+    <meta name="text:heists" content="" />
+    <meta name="text:ours" content="" />
+    <meta name="text:all-in-one" content="" />
+    <meta
+      name="image:member1"
+      content="https://source.unsplash.com/random/64x64"
+    />
+    <meta
+      name="image:member2"
+      content="https://source.unsplash.com/random/64x64"
+    />
+    <meta
+      name="image:member3"
+      content="https://source.unsplash.com/random/64x64"
+    />
+    <meta
+      name="image:member4"
+      content="https://source.unsplash.com/random/64x64"
+    />
+    <meta
+      name="image:member5"
+      content="https://source.unsplash.com/random/64x64"
+    />
+    <meta
+      name="image:member6"
+      content="https://source.unsplash.com/random/64x64"
+    />
+    <meta
+      name="image:member7"
+      content="https://source.unsplash.com/random/64x64"
+    />
+    <meta
+      name="image:rightimage"
+      content="https://source.unsplash.com/random/250x150"
+    />
+    <meta
+      name="image:aff1"
+      content="https://source.unsplash.com/random/64x64"
+    />
+    <meta
+      name="image:aff2"
+      content="https://source.unsplash.com/random/64x64"
+    />
+    <meta
+      name="image:aff3"
+      content="https://source.unsplash.com/random/64x64"
+    />
+    <meta
+      name="image:aff4"
+      content="https://source.unsplash.com/random/64x64"
+    />
+    <meta name="text:lefttop" content="kazz" />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>{Title}</title>
+  </head>
+  <style>
+          @font-face {
+      font-family: elephant;
+      src: url(elephant.TTF);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .hidden{
+      visibility: hidden;
+    }
+    :root {
+      --header: {color:Headers};
+      --background: {color:Background};
+      --red: {color:Accent};
+      --bluestuff: {font:mostthings};
+    }
+    body {
+      background-color: var(--background);
+    }
+    .header {
+      width: 25%;
+      height: 150vh;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      background-color: var(--header);
+      display: flex;
+      flex-direction: column;
+      font-family: var(--bluestuff);
+    }
+    .h-first-part {
+      display: flex;
+      flex-direction: row;
+      padding-left: 20px;
+      padding-top: 20px;
+    }
+    .h-first-part img {
+      filter: grayscale(100%);
+      width: 64px;
+      height: 64px;
+    }
+    .h-first-part .text-first-part {
+      padding-left: 10px;
+      font-size: 12px;
+      font-style: italic;
+    }
+    .h-first-part .text-first-part p {
+      letter-spacing: 6px;
+    }
+
+    .h-second-part {
+      padding-top: 50px;
+      padding-left: 20px;
+      padding-right: 20px;
+      white-space: nowrap;
+    }
+    .h-second-part ul {
+      display: grid;
+      grid-template-columns: repeat(2, 0.5fr);
+      grid-template-rows: repeat(4, 1fr);
+      grid-column-gap: 1px;
+      grid-row-gap: 1px;
+      list-style: none;
+    }
+    .h-second-part ul li {
+      padding: 10px 10px;
+      background-color: var(--red);
+      color: #efefef;
+      text-transform: uppercase;
+      text-align: center;
+      white-space: nowrap;
+      letter-spacing: 2px;
+    }
+    .h-second-part ul li a{
+      text-decoration: none;
+      color: var(--background);
+    }
+    .h-second-part ul li a:hover{
+      color: var(--background);
+    }
+    .h-third-part {
+      padding-left: 20px;
+      padding-top: 50px;
+    }
+    .h-third-part p {
+      text-transform: uppercase;
+      padding-bottom: 30px;
+      letter-spacing: 5px;
+      font-style: italic;
+    }
+    .h-third-part ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+    }
+    .h-third-part ul li {
+      display: flex;
+      flex-direction: row;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid var(--background);
+    }
+    .h-third-part ul li:last-of-type {
+      border-bottom: none;
+    }
+    .h-third-part ul li img {
+      filter: grayscale(100%);
+      clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+      overflow: visible;
+      border-radius: 100%;
+    }
+    .h-third-part ul li .member-text {
+      padding-left: 10px;
+      font-size: 12px;
+    }
+    .h-third-part ul li .quotes {
+      padding-top: 5px;
+    }
+
+    .sidebar {
+      position: absolute;
+      width: 25%;
+      height: 150vh;
+      top: 0%;
+      right: 0%;
+      background-color: var(--header);
+      font-family: var(--bluestuff);
+    }
+    .sidebar .about {
+      display: flex;
+      flex-direction: column;
+      padding: 20px 30px;
+      width: 250px;
+    }
+    .sidebar .about img {
+      filter: grayscale(100%);
+    }
+    .sidebar .about .overlay {
+      background-color: var(--red);
+      mix-blend-mode: multiply;
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      width: 250px;
+      height: 150px;
+      clip-path: polygon(0 0, 0% 100%, 100% 100%);
+    }
+    .sidebar .about p {
+      background-color: var(--background);
+      font-size: 12px;
+      padding: 20px 10px 10px;
+    }
+    .sidebar .about .about-text {
+      font-family: elephant;
+      color: var(--background);
+      position: absolute;
+      top: 150px;
+      left: 30px;
+      padding-left: 10px;
+      font-style: italic;
+    }
+    .sidebar .heists {
+      padding: 20px 30px;
+      font-size: 12px;
+    }
+    .sidebar .heists p {
+      text-transform: uppercase;
+      font-style: italic;
+      padding-bottom: 20px;
+      letter-spacing: 5px;
+    }
+    .sidebar .heists .past,
+    .sidebar .heists .upcoming {
+      padding-left: 40px;
+    }
+    .sidebar .heists .past p:first-of-type,
+    .sidebar .heists .upcoming p:first-of-type {
+      font-style: normal;
+    }
+
+    .sidebar .heists .past p:nth-of-type(2),
+    .sidebar .heists .upcoming p:nth-of-type(2) {
+      padding-left: 5px;
+      font-style: normal;
+      text-transform: none;
+      letter-spacing: normal;
+      margin-bottom: 10px;
+      border-left: 3px solid var(--background);
+    }
+
+    .sidebar .affiliates {
+      display: flex;
+      flex-direction: column;
+      padding: 20px 30px;
+      width: 250px;
+    }
+    .sidebar .affiliates ul {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+    }
+    .sidebar .affiliates ul li {
+      display: flex;
+      flex-direction: row;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid var(--background);
+    }
+    .sidebar .affiliates ul li:last-of-type {
+      border-bottom: none;
+    }
+
+    .sidebar .affiliates ul li img {
+      filter: grayscale(100%);
+      clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+      overflow: visible;
+      border-radius: 100%;
+    }
+
+    .sidebar .affiliates ul li .member-text {
+      padding-left: 10px;
+      font-size: 12px;
+    }
+    .sidebar .affiliates ul li .quotes {
+      padding-top: 5px;
+    }
+
+    .posts{
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      position: relative;
+      width: 50%;
+      height: 200vh;
+      top: 0%;
+      left: 25%;
+      background-color: var(--background);
+    }
+    .post{
+      top: 50%;
+      left: 50%;
+      width: 25vw;
+      min-height: 40vh;
+      max-height: 90vh;
+      margin-top: 25%;
+      background-color:var(--header);
+      font-family: var(--bluestuff);
+      font-size: 12px;
+      list-style: none;
+      padding: 10px;
+
+
+
+    }
+    .post a{
+        text-decoration: none;
+        color: black;
+    }
+
+
+    .imgs-photo{
+
+        position: relative;
+        display: grid;
+        overflow: hidden;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+
+    }
+    .like-reblog{
+        list-style: none;
+        position: relative;
+        left: 110%;
+        border-left: 3px solid var(--red);
+        white-space: nowrap;
+        padding-left: 5px;
+        top: 10%;
+    }
+    .like-reblog a{
+        text-decoration: none;
+    }
+    .tags{
+        list-style: none;
+        color: var(--red);
+    }
+    .reblogs{
+        position: relative;
+        border-bottom: 2px solid var(--red);
+        margin-bottom: 10px;
+    }
+    .reblogs img{
+        border-radius: 100%;
+
+    }
+    .reblogs a{
+        text-decoration: none;
+        font-style: italic;
+        letter-spacing: 2px;
+        padding-left: 5px;
+    }
+    .question{
+        position: relative;
+        right: 0%;
+        text-align: right;
+        display: grid;
+        grid-template-columns: 1fr 0.5fr;
+        grid-template-rows: 1fr;
+
+
+
+
+    }
+
+    .question .asker{
+        position: relative;
+        font-size: 12px;
+
+    }
+
+    .answer{
+        margin-top: 10px;
+        position: relative;
+        left: 0%;
+        text-align: left;
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+        grid-template-rows: 1fr;
+
+    }
+    .answer .answerer{
+        position: relative;
+        font-size: 12px;
+    }
+    .question .asker-avatar, .answer .answerer-avatar{
+        border-radius: 100%;
+    }
+
+    .question .asker-question, .answer .answerer-answer{
+        padding: 10px 5px;
+        background-color: var(--background);
+        border-radius: 2px;
+    }
+
+    .replies{
+        margin-top: 10px;
+        border-left: 2px solid var(--red);
+        padding-left: 5px;
+        margin-left: 20px;
+    }
+    #tags{
+        border-top: 2px solid var(--background);
+        padding-top: 10px;
+        position: relative;
+        padding-bottom: 20px;
+
+    }
+    .tags{
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 5px;
+        color: var(--red);
+
+
+
+
+    }
+    .tags a{
+        color: inherit;
+
+    }
+    .tags a::before{
+        content:"'";
+    }
+    .tags a::after{
+        content:"'";
+    }
+    .pagenav{
+        color: black;
+        position: relative;
+        width: 50%;
+        top: 5%;
+        left: 50%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        font-family: var(--bluestuff);
+    }
+    .pagenav a{
+        color: black;
+        font-style: italic;
+        padding: 5px;
+        border: 5px solid var(--red);
+        border-radius: 10%;
+        text-decoration: none;
+        margin-left: 5px;
+
+    }
+
+
+          {CustomCSS}
+  </style>
+  <body>
+    <div class="header">
+      <div class="h-first-part">
+        <img src="{PortraitURL-64}" />
+        <div class="text-first-part">
+          @{text:lefttop}
+          <p>
+            scavengers.<br />
+            taking what's left.
+          </p>
+        </div>
+      </div>
+      <div class="h-second-part">
+        <ul>
+          <li><a href="{text:home}">Home</a></li>
+          <li><a href="{text:about}">About</a></li>
+          <li><a href="{text:members}">Members</a></li>
+          <li><a href="{text:message}">Message</a></li>
+          <li><a href="{text:navigation}">Navigation</a></li>
+          <li><a href="{text:heists}">Heists</a></li>
+          <li><a href="{text:ours}">Ours</a></li>
+          <li><a href="{text:all-in-one}">All-in-One</a></li>
+        </ul>
+      </div>
+      <div class="h-third-part">
+        <p>Members</p>
+        <ul>
+          <li>
+            <img src="{image:member1}" />
+            <div class="member-text">
+              <div class="urls">@brekker</div>
+              <div class="quotes">bastard of the barrel</div>
+            </div>
+          </li>
+          <div class="line"></div>
+          <li>
+            <img src="{image:member2}" />
+            <div class="member-text">
+              <div class="urls">@inejghafa</div>
+              <div class="quotes">wring magic from the ordinary</div>
+            </div>
+          </li>
+          <li>
+            <img src="{image:member3}" />
+            <div class="member-text">
+              <div class="urls">@ninas</div>
+              <div class="quotes">Twin Souls</div>
+            </div>
+          </li>
+          <li>
+            <img src="{image:member4}" />
+            <div class="member-text">
+              <div class="urls">@vansunshine</div>
+              <div class="quotes">i'm not a criminal</div>
+            </div>
+          </li>
+          <li>
+            <img src="{image:member5}" />
+            <div class="member-text">
+              <div class="urls">@jesperfahey</div>
+              <div class="quotes">i took a shot</div>
+            </div>
+          </li>
+          <li>
+            <img src="{image:member6}" />
+            <div class="member-text">
+              <div class="urls">@matthiashelvar</div>
+              <div class="quotes">
+                my ghost wouldn't associate with your ghost
+              </div>
+            </div>
+          </li>
+          <li>
+            <img src="{image:member7}" />
+            <div class="member-text">
+              <div class="urls">@nhaban</div>
+              <div class="quotes">
+                i deserve to live without a target on my back
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="about">
+        <img src="{image:rightimage}" />
+        <div class="overlay"></div>
+        <div class="about-text">about</div>
+        <p>
+          The Crows consist of six members, Kaz Brekker, Inej Ghafa, Nina Zenik,
+          Jesper Fahey, Wylan Van Eck and Matthias Helvar. The group was
+          solidified when the crew broke out a seventh member, Kuwei Yul Bo, out
+          of the Ice Court.
+        </p>
+      </div>
+      <div class="heists">
+        <p>heists</p>
+        <div class="past">
+          <p>Past</p>
+          <p>
+            The Ice Court<br />
+            The Dregs Coup <br />
+            The Auction of Kuwei Yul Bo
+          </p>
+        </div>
+        <div class="upcoming">
+          <p>Upcoming</p>
+          <p>If we told you, it wouldn't be a surprise...</p>
+        </div>
+      </div>
+      <div class="affiliates">
+        <p>Affiliates</p>
+        <ul>
+          <li>
+            <img src="{image:aff1}" />
+            <div class="member-text">
+              <div class="urls">@thedregs</div>
+              <div class="quotes">THE DREGS</div>
+            </div>
+          </li>
+          <li>
+            <img src="{image:aff2}" />
+            <div class="member-text">
+              <div class="urls">@crowclub</div>
+              <div class="quotes">Come try your luck at the Crow Club!</div>
+            </div>
+          </li>
+          <li>
+            <img src="{image:aff3}" />
+            <div class="member-text">
+              <div class="urls">@komediebrute</div>
+              <div class="quotes">Mother Father pay the rent!</div>
+            </div>
+          </li>
+          <li>
+            <img src="{image:aff4}" />
+            <div class="member-text">
+              <div class="urls">@grishasupport</div>
+              <div class="quotes">Grisha of Ketterdam</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="posts">
+      <ul class="post-list">
+        {block:HasPages}
+        <div class="page">
+          {block:Pages}
+          <div class="pagelist">
+            <a href="{URL}">{Label}</a>
+          </div>
+          {/block:Pages}
+        </div>
+        {/block:HasPages}
+
+        <!--TEXT-->
+        {block:Posts inlineMediaWidth="250"} {block:Text}
+
+        <div class="post">
+          {block:RebloggedFrom}
+          <div class="reblogs">
+            <img src="{ReblogParentPortraitURL-16}" />
+            <a href="{ReblogParentURL}">{ReblogParentName}</a><br />
+          </div>
+          {/block:RebloggedFrom} {block:NotReblog}
+          <div class="reblogs created">
+            <img src="{ReblogRootPortraitURL-16}" />
+            <a href="{ReblogRootURL}">{ReblogRootName}</a><br />
+          </div>
+          {/block:NotReblog} {block:Title}
+          <h3>
+            <a href="{Permalink}">{Title}</a>
+          </h3>
+
+          {/block:Title} {Body}
+          <ul class="like-reblog">
+            <li>{LikeButton}</li>
+            <li>{ReblogButton}</li>
+            <li>
+              {block:NoteCount}<a href="{Permalink}#notes"
+                >{NoteCountWithLabel}</a
+              >{/block:NoteCount}
+            </li>
+            <li>
+              {block:Date} <a href="{Permalink}">{TimeAgo}</a>{/block:Date}
+            </li>
+          </ul>
+          <div id="tags">
+            {block:HasTags}
+            <ul class="tags">
+              tags: {block:Tags}
+              <li><a href="{TagURL}"> {Tag} </a><br /></li>
+              {/block:Tags}
+            </ul>
+            {/block:HasTags}
+          </div>
+
+          {block:PostNotes}{PostNotes}{/block:PostNotes}
+        </div>
+
+        {/block:Text} {block:Photo}
+        <!--PHOTOS-->
+
+        <div class="post">
+          {block:RebloggedFrom}
+          <div class="reblogs">
+            <img src="{ReblogParentPortraitURL-16}" /><a
+              href="{ReblogParentURL}"
+              >{ReblogParentName}</a
+            >
+          </div>
+          {/block:RebloggedFrom} {block:NotReblog}
+          <div class="reblogs created">
+            <img src="{ReblogRootPortraitURL-16}" />
+            <a href="{ReblogRootURL}">{ReblogRootName}</a><br />
+          </div>
+          {/block:NotReblog}
+          <div class="imgs-photo">
+            <img src="{PhotoURL-100}" />
+            {block:Caption}{Caption}{/block:Caption}
+          </div>
+          <ul class="like-reblog">
+            <li>{LikeButton}</li>
+            <li>{ReblogButton}</li>
+            <li>
+              {block:NoteCount}<a href="{Permalink}#notes"
+                >{NoteCountWithLabel}</a
+              >{/block:NoteCount}
+            </li>
+            <li>
+              {block:Date} <a href="{Permalink}">{TimeAgo}</a>{/block:Date}
+            </li>
+          </ul>
+          <div id="tags">
+            {block:HasTags}
+            <ul class="tags">
+              tags: {block:Tags}
+              <li><a href="{TagURL}"> {Tag} </a><br /></li>
+              {/block:Tags}
+            </ul>
+            {/block:HasTags}
+          </div>
+
+          {block:PostNotes}{PostNotes}{/block:PostNotes}
+        </div>
+
+        {/block:Photo} {block:Photoset}
+
+        <div class="post">
+          {block:RebloggedFrom}
+          <div class="reblogs">
+            <img src="{ReblogParentPortraitURL-16}" /><a
+              href="{ReblogParentURL}"
+              >{ReblogParentName}</a
+            >
+          </div>
+          {/block:RebloggedFrom} {block:NotReblog}
+          <div class="reblogs created">
+            <img src="{ReblogRootPortraitURL-16}" />
+            <a href="{ReblogRootURL}">{ReblogRootName}</a><br />
+          </div>
+
+          {/block:NotReblog} {Photoset-250}
+          {block:Caption}{Caption}{/block:Caption}
+          <div id="tags">
+            {block:HasTags}
+            <ul class="tags">
+              tags: {block:Tags}
+              <li><a href="{TagURL}"> {Tag} </a><br /></li>
+              {/block:Tags}
+            </ul>
+            {/block:HasTags}
+          </div>
+          <ul class="like-reblog">
+            <li>{LikeButton}</li>
+            <li>{ReblogButton}</li>
+            <li>
+              {block:NoteCount}<a href="{Permalink}#notes"
+                >{NoteCountWithLabel}</a
+              >{/block:NoteCount}
+            </li>
+            <li>
+              {block:Date} <a href="{Permalink}">{TimeAgo}</a>{/block:Date}
+            </li>
+          </ul>
+          {block:PostNotes}{PostNotes}{/block:PostNotes}
+        </div>
+        {/block:Photoset} {block:Quote}
+
+        <div class="post">
+          {block:RebloggedFrom}
+          <div class="reblogs">
+            <img src="{ReblogParentPortraitURL-16}" /><a
+              href="{ReblogParentURL}"
+              >{ReblogParentName}</a
+            >
+          </div>
+          {/block:RebloggedFrom} {block:NotReblog}
+          <div class="reblogs created">
+            <img src="{ReblogRootPortraitURL-16}" />
+            <a href="{ReblogRootURL}">{ReblogRootName}</a><br />
+          </div>
+          {/block:NotReblog} {Quote} {block:Source}<br />&mdash;{Source}{/block:Source}
+          <ul class="like-reblog">
+            <li>{LikeButton}</li>
+            <li>{ReblogButton}</li>
+            <li>
+              {block:NoteCount}<a href="{Permalink}#notes"
+                >{NoteCountWithLabel}</a
+              >{/block:NoteCount}
+            </li>
+            <li>
+              {block:Date} <a href="{Permalink}">{TimeAgo}</a>{/block:Date}
+            </li>
+          </ul>
+          <div id="tags">
+            {block:HasTags}
+            <ul class="tags">
+              tags: {block:Tags}
+              <li><a href="{TagURL}"> {Tag} </a><br /></li>
+              {/block:Tags}
+            </ul>
+            {/block:HasTags}
+          </div>
+
+          {block:PostNotes}{PostNotes}{/block:PostNotes}
+        </div>
+
+        {/block:Quote} {block:Link}
+
+        <div class="post">
+          {block:RebloggedFrom}
+          <div class="reblogs">
+            <img src="{ReblogParentPortraitURL-16}" /><a
+              href="{ReblogParentURL}"
+              >{ReblogParentName}</a
+            >
+          </div>
+          {/block:RebloggedFrom} {block:NotReblog}
+          <div class="reblogs created">
+            <img src="{ReblogRootPortraitURL-16}" />
+            <a href="{ReblogRootURL}">{ReblogRootName}</a><br />
+          </div>
+          {/block:NotReblog}
+          <a href="{URL}" {Target}>{Name}</a>
+          {block:Description}{Description}{/block:Description}
+          <ul class="like-reblog">
+            <li>{LikeButton}</li>
+            <li>{ReblogButton}</li>
+            <li>
+              {block:NoteCount}<a href="{Permalink}#notes"
+                >{NoteCountWithLabel}</a
+              >{/block:NoteCount}
+            </li>
+            <li>
+              {block:Date} <a href="{Permalink}">{TimeAgo}</a>{/block:Date}
+            </li>
+          </ul>
+          <div id="tags">
+            {block:HasTags}
+            <ul class="tags">
+              tags: {block:Tags}
+              <li><a href="{TagURL}"> {Tag} </a><br /></li>
+              {/block:Tags}
+            </ul>
+            {/block:HasTags}
+          </div>
+
+          {block:PostNotes}{PostNotes}{/block:PostNotes}
+        </div>
+
+        {/block:Link} {block:Chat}
+
+        <div class="post">
+          {block:RebloggedFrom}
+          <div class="reblogs">
+            <img src="{ReblogParentPortraitURL-16}" /><a
+              href="{ReblogParentURL}"
+              >{ReblogParentName}</a
+            >
+          </div>
+          {/block:RebloggedFrom} {block:NotReblog}
+          <div class="reblogs created">
+            <img src="{ReblogRootPortraitURL-16}" />
+            <a href="{ReblogRootURL}">{ReblogRootName}</a><br />
+          </div>
+          {/block:NotReblog} {block:Title}{Title}{/block:Title}
+          <table>
+            {block:Lines}
+            <tr>
+              <th>{block:Label}{Label}{/block:Label}</th>
+              <td>{Line}</td>
+            </tr>
+            {/block:Lines}
+          </table>
+          <ul class="like-reblog">
+            <li>{LikeButton}</li>
+            <li>{ReblogButton}</li>
+            <li>
+              {block:NoteCount}<a href="{Permalink}#notes"
+                >{NoteCountWithLabel}</a
+              >{/block:NoteCount}
+            </li>
+            <li>
+              {block:Date} <a href="{Permalink}">{TimeAgo}</a>{/block:Date}
+            </li>
+          </ul>
+          <div id="tags">
+            {block:HasTags}
+            <ul class="tags">
+              tags: {block:Tags}
+              <li><a href="{TagURL}"> {Tag} </a><br /></li>
+              {/block:Tags}
+            </ul>
+            {/block:HasTags}
+          </div>
+
+          {block:PostNotes}{PostNotes}{/block:PostNotes}
+        </div>
+
+        {/block:Chat} {block:Audio}
+
+        <div class="post">
+          {block:RebloggedFrom}
+          <div class="reblogs">
+            <img src="{ReblogParentPortraitURL-16}" /><a
+              href="{ReblogParentURL}"
+              >{ReblogParentName}</a
+            >
+          </div>
+          {/block:RebloggedFrom} {block:NotReblog}
+          <div class="reblogs created">
+            <img src="{ReblogRootPortraitURL-16}" />
+            <a href="{ReblogRootURL}">{ReblogRootName}</a><br />
+          </div>
+          {/block:NotReblog} {AudioPlayer}
+          {block:Caption}{Caption}{/block:Caption}
+          <ul class="like-reblog">
+            <li>{LikeButton}</li>
+            <li>{ReblogButton}</li>
+            <li>
+              {block:NoteCount}<a href="{Permalink}#notes"
+                >{NoteCountWithLabel}</a
+              >{/block:NoteCount}
+            </li>
+            <li>
+              {block:Date} <a href="{Permalink}">{TimeAgo}</a>{/block:Date}
+            </li>
+          </ul>
+          <div id="tags">
+            {block:HasTags}
+            <ul class="tags">
+              tags: {block:Tags}
+              <li><a href="{TagURL}"> {Tag} </a><br /></li>
+              {/block:Tags}
+            </ul>
+            {/block:HasTags}
+          </div>
+
+          {block:PostNotes}{PostNotes}{/block:PostNotes}
+        </div>
+
+        {/block:Audio} {block:Video}
+
+        <div class="post">
+          {block:RebloggedFrom}
+          <div class="reblogs">
+            <img src="{ReblogParentPortraitURL-16}" /><a
+              href="{ReblogParentURL}"
+              >{ReblogParentName}</a
+            >
+          </div>
+          {/block:RebloggedFrom} {block:NotReblog}
+          <div class="reblogs created">
+            <img src="{ReblogRootPortraitURL-16}" />
+            <a href="{ReblogRootURL}">{ReblogRootName}</a><br />
+          </div>
+          {/block:NotReblog} {Video-100}
+          {block:Caption}{Caption}{/block:Caption}
+          <ul class="like-reblog">
+            <li>{LikeButton}</li>
+            <li>{ReblogButton}</li>
+            <li>
+              {block:NoteCount}<a href="{Permalink}#notes"
+                >{NoteCountWithLabel}</a
+              >{/block:NoteCount}
+            </li>
+            <li>
+              {block:Date} <a href="{Permalink}">{TimeAgo}</a>{/block:Date}
+            </li>
+          </ul>
+          <div id="tags">
+            {block:HasTags}
+            <ul class="tags">
+              tags: {block:Tags}
+              <li><a href="{TagURL}"> {Tag} </a><br /></li>
+              {/block:Tags}
+            </ul>
+            {/block:HasTags}
+          </div>
+
+          {block:PostNotes}{PostNotes}{/block:PostNotes}
+        </div>
+
+        {/block:Video} {block:Answer}
+        <div class="post">
+          {block:RebloggedFrom}
+          <div class="reblogs">
+            <img src="{ReblogParentPortraitURL-16}" /><a
+              href="{ReblogParentURL}"
+              >{ReblogParentName}</a
+            >
+          </div>
+          {/block:RebloggedFrom} {block:NotReblog}
+          <div class="reblogs created">
+            <img src="{ReblogRootPortraitURL-16}" />
+            <a href="{ReblogRootURL}">{ReblogRootName}</a><br />
+          </div>
+          {/block:NotReblog}
+          <div class="question">
+            <div class="asker-question">{Question}</div>
+            <div class="asker-user">
+              <img class="asker-avatar" src="{AskerPortraitURL-24}" alt="" />
+              <div class="asker">{Asker}</div>
+            </div>
+          </div>
+
+          {block:Answerer}
+          <div class="answer">
+            <div class="answerer-user">
+              <img
+                class="answerer-avatar"
+                src="{AnswererPortraitURL-24}"
+                alt=""
+              />
+              <div class="answerer">{Answerer}</div>
+            </div>
+            <div class="answerer-answer">{Answer}</div>
+          </div>
+          {/block:Answerer}
+
+          <div class="replies">{Replies}</div>
+          <ul class="like-reblog">
+            <li>{LikeButton}</li>
+            <li>{ReblogButton}</li>
+            <li>
+              {block:NoteCount}<a href="{Permalink}#notes"
+                >{NoteCountWithLabel}</a
+              >{/block:NoteCount}
+            </li>
+            <li>
+              {block:Date} <a href="{Permalink}">{TimeAgo}</a>{/block:Date}
+            </li>
+          </ul>
+          <div id="tags">
+            {block:HasTags}
+            <ul class="tags">
+              tags: {block:Tags}
+              <li><a href="{TagURL}"> {Tag} </a><br /></li>
+              {/block:Tags}
+            </ul>
+            {/block:HasTags}
+          </div>
+
+          {block:PostNotes}{PostNotes}{/block:PostNotes}
+        </div>
+        {/block:Answer} {/block:Posts} {block:Pagination}
+        <div class="pagenav">
+          {block:PreviousPage}<a href="{PreviousPage}">Previous</a
+          >{/block:PreviousPage} {block:NextPage}<a href="{NextPage}">Next</a
+          >{/block:NextPage}
+        </div>
+        {/block:Pagination} {/block:Posts}
+      </ul>
+    </div>
+  </body>
+  <script></script>
+</html>
