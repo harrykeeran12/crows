@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="font:mostthings" content="Arial" />
+    <meta name="color:Background" content="#efefef" />
+    <meta name="color:Headers" content="#ffffff" />
+    <meta name="color:Accent" content="#671d1d" />
+    <meta name="text:home" content="" />
+    <meta name="text:about" content="" />
+    <meta name="text:members" content="" />
+    <meta name="text:message" content="" />
+    <meta name="text:navigation" content="" />
+    <meta name="text:heists" content="" />
+    <meta name="text:ours" content="" />
+    <meta name="text:all-in-one" content="" />
+    <meta
+      name="image:member1"
+      content="https://source.unsplash.com/random/64x64"
+    />
+    <meta
+      name="image:member2"
+      content="https://source.unsplash.com/random/64x64"
+    />
+    <meta
+      name="image:member3"
+      content="https://source.unsplash.com/random/64x64"
+    />
+    <meta
+      name="image:member4"
+      content="https://source.unsplash.com/random/64x64"
+    />
+    <meta
+      name="image:member5"
+      content="https://source.unsplash.com/random/64x64"
+    />
+    <meta
+      name="image:member6"
+      content="https://source.unsplash.com/random/64x64"
+    />
+    <meta
+      name="image:member7"
+      content="https://source.unsplash.com/random/64x64"
+    />
+    <meta
+      name="image:rightimage"
+      content="https://source.unsplash.com/random/250x150"
+    />
+    <meta
+      name="image:aff1"
+      content="https://source.unsplash.com/random/64x64"
+    />
+    <meta
+      name="image:aff2"
+      content="https://source.unsplash.com/random/64x64"
+    />
+    <meta
+      name="image:aff3"
+      content="https://source.unsplash.com/random/64x64"
+    />
+    <meta
+      name="image:aff4"
+      content="https://source.unsplash.com/random/64x64"
+    />
+    <meta name="text:lefttop" content="kazz" />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>{Title}</title>
+  </head>
+  <style>
+    @font-face {
+      font-family: elephant;
+      src: url(elephant.TTF);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-size: 12px;
+    }
+    .hidden {
+      visibility: hidden;
+    }
+    :root {
+      --header: {color:Headers};
+      --background: {color:Background};
+      --red: {color:Accent};
+      --bluestuff: {font:mostthings};
+    }
+    body {
+      background-color: var(--background);
+    }
+    a{
+        text-decoration: none;
+        color: var(--red);
+    }
+    .header {
+      width: 25%;
+      height: 150vh;
+      position: fixed;
+      top: 0%;
+      left: 0%;
+      background-color: var(--header);
+      display: flex;
+      flex-direction: column;
+      font-family: var(--bluestuff);
+    }
+    .h-first-part {
+      display: flex;
+      flex-direction: row;
+      padding-left: 20px;
+      padding-top: 20px;
+    }
+    .h-first-part img {
+      filter: grayscale(100%);
+      width: 64px;
+      height: 64px;
+    }
+    .h-first-part .text-first-part {
+      padding-left: 10px;
+      font-size: 0.75rem;
+      font-style: italic;
+    }
+    .h-first-part .text-first-part p {
+      letter-spacing: 6px;
+    }
+
+    .h-second-part {
+      padding-top: 50px;
+      padding-left: 20px;
+      padding-right: 20px;
+      white-space: nowrap;
+    }
+    .h-second-part ul {
+      display: grid;
+      grid-template-columns: repeat(2, 0.5fr);
+      grid-template-rows: repeat(4, 1fr);
+      grid-column-gap: 1px;
+      grid-row-gap: 1px;
+      list-style: none;
+    }
+    .h-second-part ul li {
+      padding: 10px 10px;
+      background-color: var(--red);
+      color: #efefef;
+      text-transform: uppercase;
+      text-align: center;
+      white-space: nowrap;
+      letter-spacing: 2px;
+    }
+    .h-second-part ul li a {
+      text-decoration: none;
+      color: var(--background);
+    }
+    .h-second-part ul li a:hover {
+      color: var(--background);
+    }
+    .h-third-part {
+      padding-left: 20px;
+      padding-top: 50px;
+    }
+    .h-third-part p {
+      text-transform: uppercase;
+      padding-bottom: 30px;
+      letter-spacing: 5px;
+      font-style: italic;
+    }
+    .h-third-part ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+    }
+    .h-third-part ul li {
+      display: flex;
+      flex-direction: row;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid var(--background);
+    }
+    .h-third-part ul li:last-of-type {
+      border-bottom: none;
+    }
+    .h-third-part ul li img {
+      filter: grayscale(100%);
+      clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+      overflow: visible;
+      border-radius: 100%;
+      width: 32px;
+      height: 32px;
+    }
+    .h-third-part ul li .member-text {
+      padding-left: 10px;
+      font-size: 0.75rem;
+    }
+    .h-third-part ul li .quotes {
+      padding-top: 5px;
+    }
+
+    .sidebar {
+      position: fixed;
+      width: 25%;
+      height: 150vh;
+      top: 0%;
+      right: 0%;
+      background-color: var(--header);
+      font-family: var(--bluestuff);
+    }
+    .sidebar .about {
+      display: flex;
+      flex-direction: column;
+      padding: 20px 30px;
+      width: 250px;
+    }
+    .sidebar .about img {
+      filter: grayscale(100%);
+    }
+    .sidebar .about .overlay {
+      background-color: var(--red);
+      mix-blend-mode: multiply;
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      width: 250px;
+      height: 150px;
+      clip-path: polygon(0 0, 0% 100%, 100% 100%);
+    }
+    .sidebar .about p {
+      background-color: var(--background);
+      font-size: 0.75rem;
+      padding: 20px 10px 10px;
+    }
+    .sidebar .about .about-text {
+      font-family: elephant;
+      color: var(--background);
+      position: absolute;
+      top: 150px;
+      left: 30px;
+      padding-left: 10px;
+      font-style: italic;
+    }
+    .sidebar .heists {
+      padding: 20px 30px;
+      font-size: 0.75rem;
+    }
+    .sidebar .heists p {
+      text-transform: uppercase;
+      font-style: italic;
+      padding-bottom: 20px;
+      letter-spacing: 5px;
+    }
+    .sidebar .heists .past,
+    .sidebar .heists .upcoming {
+      padding-left: 40px;
+    }
+    .sidebar .heists .past p:first-of-type,
+    .sidebar .heists .upcoming p:first-of-type {
+      font-style: normal;
+    }
+
+    .sidebar .heists .past p:nth-of-type(2),
+    .sidebar .heists .upcoming p:nth-of-type(2) {
+      padding-left: 5px;
+      font-style: normal;
+      text-transform: none;
+      letter-spacing: normal;
+      margin-bottom: 10px;
+      border-left: 3px solid var(--background);
+    }
+
+    .sidebar .affiliates {
+      display: flex;
+      flex-direction: column;
+      padding: 20px 30px;
+      width: 250px;
+    }
+    .sidebar .affiliates ul {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+    }
+    .sidebar .affiliates ul li {
+      display: flex;
+      flex-direction: row;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid var(--background);
+    }
+    .sidebar .affiliates ul li:last-of-type {
+      border-bottom: none;
+    }
+
+    .sidebar .affiliates ul li img {
+      filter: grayscale(100%);
+      clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+      overflow: visible;
+      border-radius: 100%;
+      width: 32px;
+      height: 32px;
+    }
+
+    .sidebar .affiliates ul li .member-text {
+      padding-left: 10px;
+      font-size: 0.75rem;
+    }
+    .sidebar .affiliates ul li .quotes {
+      padding-top: 5px;
+    }
+#posts {
+margin-left: 25%;
+width: 50%;
+}
+ 
+.entries {
+margin-bottom: 50px;
+width: 500px;
+padding: 5%;
+}
+
+.entries img {
+height: auto;
+max-width: 100%;
+}
+
+.read_more {
+background: white;
+border: 1px solid var(--red);
+border-radius: 5px;
+color: black;
+display: inline-block;
+font-size: 0.9rem;
+padding: 5px;
+text-align: center;
+text-transform: uppercase;
+width: calc(100% - 22px);
+}
+
+.read_more:hover {
+background: white;
+color: aqua;
+}
+
+.text p {
+margin-top: 0px;
+}
+ 
+.caption {
+margin-top: 20px;
+}
+
+.caption p {
+margin-top: 0px;
+}
+
+.ask-wrapper {
+width: 100%;
+}
+ /**/
+.question {
+  position: relative;
+  right: 0%;
+  text-align: right;
+  display: grid;
+  grid-template-columns: 1fr 0.2fr;
+  grid-template-rows: 1fr;
+}
+
+.question .asker {
+  position: relative;
+  font-size: 12px;
+}
+
+.answer {
+  margin-top: 10px;
+  position: relative;
+  left: 0%;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 0.2fr 1fr;
+  grid-template-rows: 1fr;
+}
+.answer .answerer {
+  position: relative;
+  font-size: 12px;
+}
+.question .asker-avatar,
+.answer .answerer-avatar {
+  border-radius: 100%;
+}
+
+.question .asker-question,
+.answer .answerer-answer {
+  padding: 10px 5px;
+  background-color: var(--background);
+  border-radius: 2px;
+}
+/**/
+
+.quote {
+background: var(--background);
+font-size: 0.9rem;
+padding: 10px;
+text-align: left;
+text-transform: uppercase;
+}
+
+.website {
+border: 1px solid var(--red);
+border-radius: 5px;
+font-size: 0.9rem;
+padding: 10px;
+text-align: left;
+text-transform: uppercase;
+}
+
+.chat {
+font-size: 0.9rem;
+text-align: left;
+text-transform: uppercase;
+}
+
+.chat li {
+list-style-type: none;
+}
+
+.chat li:nth-child(odd) {
+background:var(--red);
+color: var(--background);
+padding: 5px;
+}
+
+.chat li:nth-child(even) {
+background: var(--background);
+color: var(--red);
+padding: 5px;
+}
+
+.audio iframe {
+height: 85px;
+width: 500px;
+}
+
+.entries-information {
+border-top: 1px solid var(--red);
+font-size: 0.9rem;
+margin-top: 20px;
+padding-top: 10px;
+text-align: left;
+/*text-transform: uppercase;*/
+}
+
+.notes li {
+list-style-type: none;
+margin-left: -40px;
+}
+
+.notes img {
+display: none;
+}
+
+.pagination {
+font-size: 0.9rem;
+text-transform: uppercase;
+margin: 0 auto;
+text-decoration: none;
+font-family: var(--bluestuff);
+color: var(--red);
+padding-top: 5px;
+}
+.pagination a{
+    text-decoration: none;
+    color: var(--red);
+}
+.reblogs{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--red);
+}
+.reblogs img{
+    border-radius: 100%;
+    margin-right: 5px;
+}
+.spread{
+    font-style: italic;
+    letter-spacing: 5px;
+}
+.cap{
+    text-transform: uppercase;
+}
+.notes{
+    padding-left: 20px;
+    padding-top: 20px;
+}
+    /**/
+
+    
+
+    /* {CustomCSS} */
+  </style>
+  <body>
+    <div class="header">
+      <div class="h-first-part">
+        <img src="{PortraitURL-64}" />
+        <div class="text-first-part">
+          @{text:lefttop}
+          <p>
+            scavengers.<br />
+            taking what's left.
+          </p>
+        </div>
+      </div>
+      <div class="h-second-part">
+        <ul>
+          <li><a href="{text:home}">Home</a></li>
+          <li><a href="{text:about}">About</a></li>
+          <li><a href="{text:members}">Members</a></li>
+          <li><a href="{text:message}">Message</a></li>
+          <li><a href="{text:navigation}">Navigation</a></li>
+          <li><a href="{text:heists}">Heists</a></li>
+          <li><a href="{text:ours}">Ours</a></li>
+          <li><a href="{text:all-in-one}">All-in-One</a></li>
+        </ul>
+      </div>
+      <div class="h-third-part">
+        <p>Members</p>
+        <ul>
+          <li>
+            <img src="{image:member1}" />
+            <div class="member-text">
+              <div class="urls">@brekker</div>
+              <div class="quotes">bastard of the barrel</div>
+            </div>
+          </li>
+          <div class="line"></div>
+          <li>
+            <img src="{image:member2}" />
+            <div class="member-text">
+              <div class="urls">@inejghafa</div>
+              <div class="quotes">wring magic from the ordinary</div>
+            </div>
+          </li>
+          <li>
+            <img src="{image:member3}" />
+            <div class="member-text">
+              <div class="urls">@ninas</div>
+              <div class="quotes">Twin Souls</div>
+            </div>
+          </li>
+          <li>
+            <img src="{image:member4}" />
+            <div class="member-text">
+              <div class="urls">@vansunshine</div>
+              <div class="quotes">i'm not a criminal</div>
+            </div>
+          </li>
+          <li>
+            <img src="{image:member5}" />
+            <div class="member-text">
+              <div class="urls">@jesperfahey</div>
+              <div class="quotes">i took a shot</div>
+            </div>
+          </li>
+          <li>
+            <img src="{image:member6}" />
+            <div class="member-text">
+              <div class="urls">@matthiashelvar</div>
+              <div class="quotes">
+                my ghost wouldn't associate with your ghost
+              </div>
+            </div>
+          </li>
+          <li>
+            <img src="{image:member7}" />
+            <div class="member-text">
+              <div class="urls">@nhaban</div>
+              <div class="quotes">
+                i deserve to live without a target on my back
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      {block:Pagination}
+<div class="pagination">
+{CurrentPage} Out Of {TotalPages}<br>
+{block:PreviousPage}
+<a href="{PreviousPage}">Previous</a> 
+{/block:PreviousPage}
+{block:NextPage}
+Or <a href="{NextPage}">Next</a>
+{/block:NextPage}
+</div>
+{/block:Pagination}
+      
+    </div>
+    <div class="sidebar">
+      <div class="about">
+        <img src="{image:rightimage}" />
+        <div class="overlay"></div>
+        <div class="about-text">about</div>
+        <p>
+          The Crows consist of six members, Kaz Brekker, Inej Ghafa, Nina Zenik,
+          Jesper Fahey, Wylan Van Eck and Matthias Helvar. The group was
+          solidified when the crew broke out a seventh member, Kuwei Yul Bo, out
+          of the Ice Court.
+        </p>
+      </div>
+      <div class="heists">
+        <p>heists</p>
+        <div class="past">
+          <p>Past</p>
+          <p>
+            The Ice Court<br />
+            The Dregs Coup <br />
+            The Auction of Kuwei Yul Bo
+          </p>
+        </div>
+        <div class="upcoming">
+          <p>Upcoming</p>
+          <p>If we told you, it wouldn't be a surprise...</p>
+        </div>
+      </div>
+      <div class="affiliates">
+        <p class="spread cap">Affiliates</p>
+        <ul>
+          <li>
+            <img src="{image:aff1}" />
+            <div class="member-text">
+              <div class="urls">@thedregs</div>
+              <div class="quotes">THE DREGS</div>
+            </div>
+          </li>
+          <li>
+            <img src="{image:aff2}" />
+            <div class="member-text">
+              <div class="urls">@crowclub</div>
+              <div class="quotes">Come try your luck at the Crow Club!</div>
+            </div>
+          </li>
+          <li>
+            <img src="{image:aff3}" />
+            <div class="member-text">
+              <div class="urls">@komediebrute</div>
+              <div class="quotes">Mother Father pay the rent!</div>
+            </div>
+          </li>
+          <li>
+            <img src="{image:aff4}" />
+            <div class="member-text">
+              <div class="urls">@grishasupport</div>
+              <div class="quotes">Grisha of Ketterdam</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="posts">
+
+{block:Posts}
+
+<div class="entries" id="{PostID}">
+{block:RebloggedFrom}
+<div class="reblogs">
+<img src="{ReblogParentPortraitURL-16}" /><a href="{ReblogParentURL}" class="spread">{ReblogParentName}</a>
+</div>
+{/block:RebloggedFrom} {block:NotReblog}
+<div class="reblogs created">
+<img src="{ReblogRootPortraitURL-16}" />
+<a href="{ReblogRootURL}">{ReblogRootName}</a><br />
+</div>
+{/block:NotReblog}
+{block:Text}
+{block:Title}
+<h1>{Title}</h1>
+{/block:Title}
+<div class="text">
+{Body}
+</div>
+{/block:Text}
+
+{block:Answer}
+<div class="ask-wrapper">
+<div class="question">
+<div class="asker-question">{Question}</div>
+<div class="asker-user">
+<img class="asker-avatar" src="{AskerPortraitURL-24}" alt="" />
+<div class="asker">{Asker}</div>
+</div>
+</div>
+
+{block:Answerer}
+<div class="answer">
+<div class="answerer-user">
+<img
+class="answerer-avatar"
+src="{AnswererPortraitURL-24}"
+alt=""
+/>
+<div class="answerer">{Answerer}</div>
+</div>
+<div class="answerer-answer">{Answer}</div>
+</div>
+{/block:Answerer}
+
+<div class="replies">{Replies}</div>
+</div>
+{/block:Answer}
+
+{block:Quote}
+<div class="quote">
+"{Quote}</i>" {block:Source}— {Source}{/block:Source}
+</div>
+{/block:Quote}
+
+{block:Link}
+<div class="website"><a href="{URL}" target="_blank">{Name}</a></div>
+{block:Description}
+<div class="caption">
+{Description}
+</div>
+{/block:Description}
+{/block:Link}
+
+{block:Chat}
+<div class="chat">
+{block:Title}
+<h1>{Title}</h1>
+{/block:Title}
+{block:Lines}
+<li>{block:Label}{Label}{/block:Label}
+{Line}
+</li>
+{/block:Lines}
+</div>
+{/block:Chat}
+
+{block:Audio}
+<div class="audio">
+{AudioEmbed}
+</div>
+{block:Caption}
+<div class="caption">{Caption}</div>
+{/block:Caption}
+{/block:Audio}
+
+{block:Photo}
+<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+<div class="caption">{Caption}</div>
+{/block:Caption}
+{/block:Photo}
+
+{block:Photoset}
+{Photoset}
+{block:Caption}
+<div class="caption">{Caption}</div>
+{/block:Caption}
+{/block:Photoset}
+
+{block:Video}
+<div class="video">
+{Video-500}
+</div>
+{block:Caption}
+<div class="caption">{Caption}</div>
+{/block:Caption}
+{/block:Video}
+
+{block:Date}
+<div class="entries-information">
+{block:Date}({block:NoteCount}<a href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}  {block:NoteCount}/{/block:NoteCount} <a href="{Permalink}">{DayOfMonth} {ShortMonth} {Year}</a>){/block:Date}
+{block:RebloggedFrom} <a href="{ReblogParentURL}">Via</a> / {/block:RebloggedFrom}  
+{block:ContentSource} <a href="{SourceURL}">Source</a> / {/block:ContentSource}
+<a href="{ReblogURL}" target="_blank">Reblog</a>
+<div class="tags">
+{block:Tags}
+<a href="{TagURL}" style="margin-right: 5px;">#{Tag}</a>
+{/block:Tags}
+</div>
+<div class="notes">
+{block:PostNotes}
+{PostNotes}
+{/block:PostNotes}
+</div>
+</div>
+{/block:Date}
+
+</div>
+
+{/block:Posts}
+
+
+
+</div>
+
+</div>
+
+  </body>
+  <script></script>
+</html>

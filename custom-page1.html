@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style2.css" />
+    <title>members</title>
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      @font-face {
+        font-family: BookAntiqua;
+        src: url(Book\ Antiqua.ttf);
+      }
+
+      :root {
+        --header: #ffffff;
+        --background: #efefef;
+        --red: #671d1d;
+        --bluestuff: Arial;
+        --listgap: 40px;
+      }
+      body {
+        background-color: var(--background);
+      }
+      .topheader {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        width: 100vw;
+        height: 30vh;
+        position: relative;
+        background-color: var(--header);
+      }
+      .topheader p {
+        position: absolute;
+        font-family: Bodoni MT;
+        font-size: xx-large;
+        font-style: italic;
+        text-transform: uppercase;
+        padding-top: 50px;
+      }
+
+      .navbar {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        margin-top: 10%;
+        list-style: none;
+      }
+
+      .navbar li {
+        padding: 20px;
+        text-transform: uppercase;
+        color: gray;
+        font-family: var(--bluestuff);
+      }
+      .members {
+        display: grid;
+        grid-template-columns: repeat(3, 0.75fr);
+        grid-template-rows: repeat(3, 0.25fr);
+        list-style: none;
+        position: relative;
+        padding-top: 70px;
+        height: 60vh;
+      }
+      .members li {
+        text-align: center;
+        white-space: nowrap;
+        width: 70px;
+        margin-left: var(--listgap);
+        margin-right: var(--listgap);
+        height: 20vh;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 3px;
+      }
+      .members li:hover > .info {
+        animation: fadeIn 500ms forwards;
+      }
+      .aliases {
+        background-color: #e3e3e3;
+        text-transform: uppercase;
+        font-size: 8px;
+        text-align: center;
+        font-family: BookAntiqua;
+        font-stretch: condensed;
+      }
+      .info {
+        color: white;
+        margin-top: 10px;
+        font-size: 8px;
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: black;
+        opacity: 0;
+      }
+      .info .url {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        margin-top: 2px;
+        font-size: 8px;
+      }
+      .infotext {
+        text-align: left;
+        position: absolute;
+        font-size: 6px;
+        top: 0%;
+        left: 0%;
+        margin-top: 20px;
+        margin-left: 2px;
+        white-space: normal;
+      }
+
+      .members-control {
+        width: 100vw;
+        height: 50vh;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
+    <div class="topheader">
+      <p>Members</p>
+      <ul class="navbar">
+        <li>Home</li>
+        <li>About</li>
+        <li>Members</li>
+        <li>Navigation</li>
+      </ul>
+    </div>
+    <div class="members-control">
+      <ul class="members">
+        <li>
+          <p class="aliases">Dirtyhands</p>
+          <img src="https://source.unsplash.com/random/70x70" />
+          <section class="info">
+            <p class="url">@brekker</p>
+            <p class="infotext">
+              <i>Admin</i> <br />
+              Kaz Brekker. 17. Barrel Boss <br />
+              The really bad monsters never look like monsters
+            </p>
+          </section>
+        </li>
+        <li>
+          <p class="aliases">Wraith</p>
+          <img src="https://source.unsplash.com/random/70x70" />
+          <section class="info">
+            <p class="url">@inejghafa</p>
+            <p class="infotext">
+              Inej, xvii, Spider <br />
+              her future was waiting above.
+            </p>
+          </section>
+        </li>
+        <li>
+          <p class="aliases">Heartrender</p>
+          <img src="https://source.unsplash.com/random/70x70" />
+          <section class="info">
+            <p class="url">@nina</p>
+            <p class="infotext">
+              Nina Zenik. Grisha. <br />
+              Stop worrying about saving the world and save your own ass.
+            </p>
+          </section>
+        </li>
+        <li></li>
+        <li>
+          <p class="aliases">Phoenix</p>
+          <img src="https://source.unsplash.com/random/70x70" />
+          <section class="info">
+            <p class="url">@nhaban</p>
+            <p class="infotext">
+              kuwei, 17, inferni <br />
+              tired of living with a target on my back.
+            </p>
+          </section>
+        </li>
+        <li></li>
+        <li>
+          <p class="aliases">Runaway</p>
+          <img src="https://source.unsplash.com/random/70x70" />
+          <section class="info">
+            <p class="url">@vansunshine</p>
+            <p class="infotext">
+              wylan van eck, xvi <br />
+              They're not like words. They don't get messed uo.
+            </p>
+          </section>
+        </li>
+        <li>
+          <p class="aliases">Sharpshooter</p>
+          <img src="https://source.unsplash.com/random/70x70" />
+          <section class="info">
+            <p class="url">@jesperfahey</p>
+            <p class="infotext">
+              Jesper Fahey. 17. Bi. <br />
+              This action will have no echo.
+            </p>
+          </section>
+        </li>
+        <li>
+          <p class="aliases">Druskelle</p>
+          <img src="https://source.unsplash.com/random/70x70" />
+          <section class="info">
+            <p class="url">@matthiashelvar</p>
+            <p class="infotext">
+              Matthias. XVIII <br />
+              I have been made to protect you. Even in death. I will find a way.
+            </p>
+          </section>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

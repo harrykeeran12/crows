@@ -69,7 +69,7 @@
     <title>{Title}</title>
   </head>
   <style>
-          @font-face {
+    @font-face {
       font-family: elephant;
       src: url(elephant.TTF);
     }
@@ -78,14 +78,22 @@
       margin: 0;
       padding: 0;
     }
-    .hidden{
+    .hidden {
       visibility: hidden;
     }
     :root {
-      --header: {color:Headers};
-      --background: {color:Background};
-      --red: {color:Accent};
-      --bluestuff: {font:mostthings};
+      --header: {
+        color: Headers;
+      }
+      --background: {
+        color: Background;
+      }
+      --red: {
+        color: Accent;
+      }
+      --bluestuff: {
+        font: mostthings;
+      }
     }
     body {
       background-color: var(--background);
@@ -144,11 +152,11 @@
       white-space: nowrap;
       letter-spacing: 2px;
     }
-    .h-second-part ul li a{
+    .h-second-part ul li a {
       text-decoration: none;
       color: var(--background);
     }
-    .h-second-part ul li a:hover{
+    .h-second-part ul li a:hover {
       color: var(--background);
     }
     .h-third-part {
@@ -181,6 +189,8 @@
       clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
       overflow: visible;
       border-radius: 100%;
+      width: 32px;
+      height: 32px;
     }
     .h-third-part ul li .member-text {
       padding-left: 10px;
@@ -288,6 +298,8 @@
       clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
       overflow: visible;
       border-radius: 100%;
+      width: 32px;
+      height: 32px;
     }
 
     .sidebar .affiliates ul li .member-text {
@@ -298,7 +310,9 @@
       padding-top: 5px;
     }
 
-    .posts{
+    /**/
+
+    .posts {
       display: flex;
       justify-content: center;
       align-content: center;
@@ -309,169 +323,150 @@
       left: 25%;
       background-color: var(--background);
     }
-    .post{
+    .post {
       top: 50%;
       left: 50%;
       width: 25vw;
       min-height: 40vh;
       max-height: 90vh;
       margin-top: 25%;
-      background-color:var(--header);
+      background-color: var(--header);
       font-family: var(--bluestuff);
       font-size: 12px;
       list-style: none;
       padding: 10px;
-
-
-
     }
-    .post a{
-        text-decoration: none;
-        color: black;
+    .post a {
+      text-decoration: none;
+      color: black;
     }
 
-
-    .imgs-photo{
-
-        position: relative;
-        display: grid;
-        overflow: hidden;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-
+    .imgs-photo {
+      position: relative;
+      display: grid;
+      overflow: hidden;
+      grid-template-columns: repeat(2, 1fr);
+      /* grid-template-rows: repeat(2, calc({PhotoCount}/2) fr); */
     }
-    .like-reblog{
-        list-style: none;
-        position: relative;
-        left: 110%;
-        border-left: 3px solid var(--red);
-        white-space: nowrap;
-        padding-left: 5px;
-        top: 10%;
+    .like-reblog {
+      list-style: none;
+      position: relative;
+      left: 110%;
+      border-left: 3px solid var(--red);
+      white-space: nowrap;
+      padding-left: 5px;
+      top: 10%;
     }
-    .like-reblog a{
-        text-decoration: none;
+    .like-reblog a {
+      text-decoration: none;
     }
-    .tags{
-        list-style: none;
-        color: var(--red);
+    .tags {
+      list-style: none;
+      color: var(--red);
     }
-    .reblogs{
-        position: relative;
-        border-bottom: 2px solid var(--red);
-        margin-bottom: 10px;
+    .reblogs {
+      position: relative;
+      border-bottom: 2px solid var(--red);
+      margin-bottom: 10px;
     }
-    .reblogs img{
-        border-radius: 100%;
-
+    .reblogs img {
+      border-radius: 100%;
     }
-    .reblogs a{
-        text-decoration: none;
-        font-style: italic;
-        letter-spacing: 2px;
-        padding-left: 5px;
+    .reblogs a {
+      text-decoration: none;
+      font-style: italic;
+      letter-spacing: 2px;
+      padding-left: 5px;
     }
-    .question{
-        position: relative;
-        right: 0%;
-        text-align: right;
-        display: grid;
-        grid-template-columns: 1fr 0.5fr;
-        grid-template-rows: 1fr;
-
-
-
-
+    .question {
+      position: relative;
+      right: 0%;
+      text-align: right;
+      display: grid;
+      grid-template-columns: 1fr 0.5fr;
+      grid-template-rows: 1fr;
     }
 
-    .question .asker{
-        position: relative;
-        font-size: 12px;
-
+    .question .asker {
+      position: relative;
+      font-size: 12px;
     }
 
-    .answer{
-        margin-top: 10px;
-        position: relative;
-        left: 0%;
-        text-align: left;
-        display: grid;
-        grid-template-columns: 0.5fr 1fr;
-        grid-template-rows: 1fr;
-
+    .answer {
+      margin-top: 10px;
+      position: relative;
+      left: 0%;
+      text-align: left;
+      display: grid;
+      grid-template-columns: 0.5fr 1fr;
+      grid-template-rows: 1fr;
     }
-    .answer .answerer{
-        position: relative;
-        font-size: 12px;
+    .answer .answerer {
+      position: relative;
+      font-size: 12px;
     }
-    .question .asker-avatar, .answer .answerer-avatar{
-        border-radius: 100%;
-    }
-
-    .question .asker-question, .answer .answerer-answer{
-        padding: 10px 5px;
-        background-color: var(--background);
-        border-radius: 2px;
+    .question .asker-avatar,
+    .answer .answerer-avatar {
+      border-radius: 100%;
     }
 
-    .replies{
-        margin-top: 10px;
-        border-left: 2px solid var(--red);
-        padding-left: 5px;
-        margin-left: 20px;
-    }
-    #tags{
-        border-top: 2px solid var(--background);
-        padding-top: 10px;
-        position: relative;
-        padding-bottom: 20px;
-
-    }
-    .tags{
-        display: inline-flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 5px;
-        color: var(--red);
-
-
-
-
-    }
-    .tags a{
-        color: inherit;
-
-    }
-    .tags a::before{
-        content:"'";
-    }
-    .tags a::after{
-        content:"'";
-    }
-    .pagenav{
-        color: black;
-        position: relative;
-        width: 50%;
-        top: 5%;
-        left: 50%;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        font-family: var(--bluestuff);
-    }
-    .pagenav a{
-        color: black;
-        font-style: italic;
-        padding: 5px;
-        border: 5px solid var(--red);
-        border-radius: 10%;
-        text-decoration: none;
-        margin-left: 5px;
-
+    .question .asker-question,
+    .answer .answerer-answer {
+      padding: 10px 5px;
+      background-color: var(--background);
+      border-radius: 2px;
     }
 
+    .replies {
+      margin-top: 10px;
+      border-left: 2px solid var(--red);
+      padding-left: 5px;
+      margin-left: 20px;
+    }
+    #tags {
+      border-top: 2px solid var(--background);
+      padding-top: 10px;
+      position: relative;
+      padding-bottom: 20px;
+    }
+    .tags {
+      display: inline-flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 5px;
+      color: var(--red);
+    }
+    .tags a {
+      color: inherit;
+    }
+    .tags a::before {
+      content: "'";
+    }
+    .tags a::after {
+      content: "'";
+    }
+    .pagenav {
+      color: black;
+      position: relative;
+      width: 50%;
+      top: 5%;
+      left: 50%;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      font-family: var(--bluestuff);
+    }
+    .pagenav a {
+      color: black;
+      font-style: italic;
+      padding: 5px;
+      border: 5px solid var(--red);
+      border-radius: 10%;
+      text-decoration: none;
+      margin-left: 5px;
+    }
 
-          {CustomCSS}
+    /* {CustomCSS} */
   </style>
   <body>
     <div class="header">
